@@ -1,0 +1,15 @@
+<script>
+    var xhr = new XMLHttpRequest(); //객체  생성
+    xhr.onreadystatechange = function() { //이벤트 리스너
+        if(xhr.readyState === xhr.DONE){ //요청이 완료되면
+            if(xhr.status ===200 || xhr.status === 201){ //해당 코드일 시
+                console.log(xhr.responseText);//서버가 보내는 값
+            }
+            else{
+                console.error(xhr.responseText);
+            }
+        }
+    }
+    xhr.open('GET', 'https://www.zerocho.com/api/get');
+    xhr.send();
+</script>

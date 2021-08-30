@@ -1,0 +1,16 @@
+<script>
+    var formdata = new FormData();
+    formData.append('name', 'zerocho'); //name에 zerocho 항목 추가
+    formData.append('item', 'orange'); //item에 orange 항목 추가
+    formData.append('item', 'melon'); //item에 melon 항목 추가
+    formData.has('item'); // true
+    formData.has('money');// false
+    formData.get('item'); //orange(가장 첫 번째 값)
+    formData.getAll('itme'); //리스트형태로 그대로 가져옴
+    formData.append('test', ['hi', 'zero']);//리스트 형태로 삽입
+    formData.get('test');// hi, zero
+    formData.delete('test');//test항목 삭제
+    formData.get('test');//null
+    formData.set('item','apple');//현재 키를 수정
+    formData.getAll('item'); // ['apple']
+</script>
